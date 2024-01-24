@@ -8,6 +8,7 @@ import { fetchCurrentUser } from '../redux/Auth/operations';
 import { isRefreshing } from '../redux/Auth/selectors';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
+import NotFoundPage from 'pages/NotFoundPage';
 const HomePage = lazy(() => import('../pages/HomePage'));
 const RegisterPage = lazy(() => import('../pages/RegisterPage'));
 const LoginPage = lazy(() => import('../pages/LoginPage'));
@@ -53,6 +54,7 @@ export const App = () => {
             }
           />
         </Route>
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <ToastContainer />
     </>
