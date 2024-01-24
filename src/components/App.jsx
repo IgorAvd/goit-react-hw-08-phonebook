@@ -53,8 +53,8 @@ export const App = () => {
               </PrivateRoute>
             }
           />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
-        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <ToastContainer />
     </>
